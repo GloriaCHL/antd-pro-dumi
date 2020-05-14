@@ -1,10 +1,10 @@
 import React from 'react';
-import {useIntl, FormattedMessage} from 'umi';
+import {useIntl} from 'umi';
 
 const TestIntl = () => {
   const intl = useIntl();
   const msg = intl.formatMessage({id: 'test.intl.hello.world'});
-  return <h1><FormattedMessage id="test.intl.hello.world"/></h1>
+  return <h1>{msg}</h1>
 };
 
 export default TestIntl;
