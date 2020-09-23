@@ -1,11 +1,12 @@
-const path = require('path');
-const pluginPath = path.resolve(__dirname, '../../node_modules/@umijs/plugin-locale');
-console.log('++++++++++++++++++++++++++++++++++++', pluginPath);
-export default {
-  chainWebpack(memo: any) {
-    memo.plugins.delete('copy');
+// https://umijs.org/config/
+import { defineConfig } from 'umi';
+
+export default defineConfig({
+  locale: {
+    // default zh-CN
+    default: 'zh-CN',
+    // default true, when it is true, will use `navigator.language` overwrite default
+    antd: true,
+    baseNavigator: true,
   },
-  plugins: [
-    pluginPath
-  ]
-}
+});
